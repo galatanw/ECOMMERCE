@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/cart.js"></script>
+</head>
+<body>
+    <header>
+    
+        <li id="search" style="display: none;" class="userNavLi"><input id="search" ></li>
+        <nav id="userNav">
+            <ul id="userNavUl">
+            <li class="userNavLi "><a href="../index.html"><img src="../images/NAV/logo.png"; id="userNavLogo"></a></li>
+            <li class="userNavLi "><img src="../images/NAV/searchLogo.png" id="searchLogo"></li>
+            <li class="userNavLi aImg"><a href="#user"><img src="../images/NAV/user.png" class="aImg" ></a></li>
+            <li class="userNavLi aImg"id="cartLogo"><img src="../images/NAV/cart.png" class="aImg" ></li>
+            <li class="userNavLi aImg" id="wishlist" onclick="wishlistDisplay()"><img src="../images/NAV/like.png" class="aImg" ></a></li>
+        </ul>
+    </nav>
+    </header>
+    <div id="wishlistContainer">
+    <h3 style="color: red;" > your personal wishlist</h3><hr>
+    <button id="wishlistClose" onclick="wishlistDisplay()">close</button>
+    <table id="wishlistTable">
+    <tr>
+        <th>item</th>
+        <th>price</th>
+        <th>final price</th>
+    </tr>  
+</table> 
+</div>
+
+           <div id="cartContainer">
+            <h3 style="color: rgb(38, 192, 38);" >items list</h3><hr>
+            <button id="cartClose">close</button>
+            <table id="cartTable">
+            <tr>
+                <th>item</th>
+                <th>quantity</th>
+                <th>final price</th>
+            </tr> 
+                <span class="priceTerra qntTerra "></span>
+            </table>
+                <table id="finalCartTh">
+                <tr>
+                    <th>total discount</th>
+                    <th> shipping</th>
+                    <th>standing discounted sum</th>
+                </tr>
+                <tr>
+                    <td class="finalCart"></td>
+                    <td class="finalCart"></td>
+                    <td class="finalCart"></td>
+                </tr>
+            </table>
+        </div>
+    <main>
+    <div id="fastBuyContainer">
+    <div id="fastBuy">
+        <a href="#pc" > <img id="fastBuyFirst" src="../images/computersANDmore/adversite.png" ></a>
+        <a href="#pc"><img id="fastBuySecond" src="../images/computersANDmore/fastSaleSeconde.png"></a>
+        <a href="#pc"><img id="fastBuyThird" src="../images/computersANDmore/fastSaleThird.png"></a>
+    </div>
+    </div>
+    <div id="first" class="category APPLE"><div class="categorytLogo"><div id="APPLE_LOGO" ></div> </div> </div>
+    <div id="second" class="category LENOVO"><div class="categorytLogo"><div id="LENOVO_LOGO"></div></div></div>
+    <div id="third"  class="category HP"><div class="categorytLogo"><div id="HP_LOGO"></div></div>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/kitchen/products.js"></script>
+    <script src="../js/pagefunctuality.js"></script>
+    <script src="../js/pageCart.js"></script>
+    <script src="../js/user.js"></script>
+    <script src="../js/wishList.js"></script>
+</body>
+</html>

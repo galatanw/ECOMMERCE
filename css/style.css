@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+ ::-webkit-scrollbar-thumb {
+    background: rgb(134, 2, 134); 
+  }  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  
+ body::-webkit-scrollbar-thumb {
+    background: #555; 
+  }
+
+  body{background-image: url(../images/background/ComputersAndMoreBackground.jpg); background-size:20vw;backdrop-filter: grayscale(0.8); backdrop-filter: blur(0.8);}
+/*----------------------------------------------------------NAV----------------------------------------------------------------------- */
+header{
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-image: linear-gradient(to right, hsl(0, 0%, 26%,.3) 0%, hsl(0, 0%, 0%,.8) 100%);
+}
+
+#userNav ul{ 
+    display:flex ;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    width: 100%;
+}
+.userNavLi {width: 5%;}
+.userNavLi img{
+    width: 100%;    
+    opacity: 0.8;
+}
+.aImg:hover{
+    transition: 1s;
+    animation: navIcons 1s linear forwards;
+    transform: scale(1.07);
+}
+@keyframes navIcons{
+0%{
+}
+100%{
+    filter: brightness(1.1);
+     opacity: 1;
+    filter: hue-rotate(90deg);
+}
+}
+
+
+/* ---------------------------------------------------FAST SALE ------------------------------------------------------------------- */
+#fastBuyContainer{
+height: 80vh;
+width: 100%;
+top: 5vh;
+margin-bottom: 3vh;
+}
+#fastBuy{
+    position: relative;
+    width: 60vw;
+    height: 60vh;
+    left: 20vw;
+    right: 20vw;
+    overflow: hidden;
+    
+}
+#fastBuy img{
+    position: absolute;
+    width: 100%;
+}
+
+#fastBuyFirst{
+animation: fastBuy 30s linear s infinite  ;}
+#fastBuySecond{
+    animation: fastBuy 30s linear 10s infinite ;}
+#fastBuyThird{
+        animation: fastBuy 30s linear 0s infinite ;}
+@keyframes fastBuy {
+    0%{
+        left: 0%;
+    }
+    31%{
+        left: 0%;
+    }
+    33%{
+        left:100%;
+    }
+    100%{
+        left: 100%;
+    }
+    
+}
+
+
+/* ---------------------------------------------------------------PRODUCTS------------------------------------------------------------*/
+
+.productContainer{
+    position: relative;
+    margin-top: 5vh;
+    left: 10vw;
+    overflow-y: hidden; 
+    width: 35vw;
+    height:20vh;
+    background-color:  hsla(240, 72%, 39%, 0.4);
+    box-shadow: 10px 10px 0px;
+}
+.productImgMain{
+    width: 30vw;
+    height: 35vh;
+    margin-left: 3vw;
+    transition: 1s  ;
+}
+.productImg{
+    position: absolute;
+    width: 30vw;
+    height: 35vh;
+    z-index: -1;
+    left: 3vw;
+    transition: 1s  ;
+}
+.smallProductImg{
+    margin-left: 10%;
+    width:13%;
+    height: 20%;
+    transition: 0.5s  ;
+    border: 1px solid silver;
+}
+.productTitle{
+    color: lightslategrey;
+    margin-bottom: 10px ;
+}
+.productInfo span{   
+    font-weight: 600;
+    color: darkgoldenrod;
+}
+.productInfo{
+    color: white;
+}
+.productImg:hover{
+    transform: scale(1.1);
+    border-bottom: 1px solid gold;
+}
+.productImgMain:hover{
+    transform: scale(1.1);
+    border-bottom: 1px solid gold;
+}
+.smallProductImg:hover{
+    transform: scale(1.5);
+    border: 1px solid gold;
+}
+
+
+/*-------------------------------------------------------------------CART-------------------------------------------------------- */
+#cartTable th,#cartTable td{
+    border: 1px solid rgb(151, 151, 151);
+}
+#cartContainer{
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.3);
+    width: 50%;
+    height: 50%;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 10vh;
+    z-index: 10;
+    background: white;
+    display: none;
+    overflow-y: scroll;
+}
+#cartTable{
+    overflow-y: scroll;
+    width: 100%;
+}
+#cartContainer img{
+    width:30%;
+}
+#finalCartTh , .finalCart{
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    bottom: 0;
+    color: white;
+    background-color: hsl(180, 25%, 25%,.8);
+    width: 100%;
+}
+#finalCartTh  , #finalCartTh td ,#finalCartTh th{
+    border: 1px  solid black;
+}
+
+/*------------------------------------ wishlist ---------------------------*/
+#wishlistTable th , #wishlistTable td{
+    border: 1px solid rgb(151, 151, 151);
+}
+#wishlistContainer{
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,.3);
+    width: 50vw;
+    height: 50vh;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 10vh;
+    z-index: 10;
+    background: white;
+    display: none;
+    overflow-y: scroll;
+}
+#wishlistTable{
+    overflow-y: scroll;
+    width: 100%;
+}
+#wishlistContainer img{
+    width:30%;
+}
+
+/* -----------------------------------------------Section----------------------------------------------------------------------- */
+
+.category{
+margin-top: 5vh;
+background-size: contain;
+display: flex;
+flex-wrap: wrap;
+row-gap: 3vh;;
+column-gap: 3vw;
+}
+/* -----------------------------------------------computers and more----------------------------------------------------------------------- */
+.APPLE{
+background-image:url(../images/background/appleBackground.jpg);}
+#APPLE_LOGO{
+    background-image:url(..//images/categoryLogo/APPLE.jpg);
+}
+#LENOVO_LOGO{
+background-image:url(..//images/categoryLogo/LENOVO.png);
+}
+#HP_LOGO{
+    background-image: url(../images/categoryLogo/HP.png);
+}
+.LENOVO{
+background-image:url(../images/background/lenovoBackground.jpg);}
+.HP{
+background-image:url(../images/background/hpBackground.jpg);}
+
+
+
+@media screen and (max-width: 992px) {
+ #fastBuyContainer{
+        height: 30vh;
+ }   }
+/*---------------------------------------------------------------- LOGOS-----------------------------------------------------------------------*/
+.categorytLogo {
+    position: relative;
+    display: flex;
+    top: -2vh;
+    width: 100%;
+    height: 10vh;
+}
+.categorytLogo div{
+    background-size: contain;
+    background-repeat:round;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    position: absolute;
+    left: 45%;
+    right:45%;
+}
+
+
