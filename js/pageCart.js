@@ -15,7 +15,6 @@ function added(containerNumber) {
     for (let i = 0; i < cart.length; i++) {
         if(cart[i][0].description==products[containerNumber].description){
             terLocation=cart[i][1].cartRow
-            console.log(terLocation);
             cart[i][1].counter+=1
             sum+=products[containerNumber].aftersale()
             preSum+=products[containerNumber].price
@@ -83,7 +82,6 @@ function remove(containerNumber){
         cart[containerNumber].splice(0,1,"deleted") 
        inCart.splice(containerNumber,1,"wasDeleted")
        terraContainer[cart[containerNumber][1].cartRow].style.display="none"
-       return console.log(containerNumber);
     }
 }
 }
